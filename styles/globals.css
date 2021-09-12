@@ -1,0 +1,5 @@
+/* if vs code shows warning , go to setting -> CSS> Lint:Unknown At Rules -> select ignore */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
