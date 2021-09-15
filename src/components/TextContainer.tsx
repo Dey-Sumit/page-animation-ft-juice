@@ -3,14 +3,9 @@ import { fadeIn, staggerContainer } from "variants";
 
 const TextContainer = () => {
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial="initial"
-      animate="animate"
-      className="flex flex-col h-full px-2 py-28 md:px-52"
-    >
+    <motion.div variants={staggerContainer} initial="initial" animate="animate" className="textContainer">
       {/* upper */}
-      <div className="flex items-center justify-between text-lg md:text-2xl">
+      <div className="textContainer-top">
         <motion.span variants={fadeIn()} className="text-green-600 ">
           Find your clean juice
         </motion.span>
@@ -19,26 +14,16 @@ const TextContainer = () => {
         </motion.span>
       </div>
       {/* //text */}
-      <div className="grid flex-1 place-items-center">
-        <motion.span
-          variants={fadeIn()}
-          initial="initial"
-          animate="animate"
-          className="text-5xl font-black tracking-wider md:text-9xl"
-        >
+      <div className="textContainer-middle">
+        <motion.span variants={fadeIn()} initial="initial" animate="animate">
           ORANGE
         </motion.span>
       </div>
       {/* lower */}
-      <div className="flex items-center justify-between ">
-        <motion.button
-          variants={fadeIn()}
-          className="p-2 text-base tracking-wide text-white lowercase bg-gray-900 rounded-lg md:px-6 md:py-3 md:text-lg "
-        >
-          show all the juices
-        </motion.button>
-        <motion.p variants={fadeIn()} className="text-sm font-semibold md:text-2xl">
-          Your healthy <span className="text-green-600"> life </span> <br /> starts here with us!
+      <div className="textContainer-bottom ">
+        <motion.button variants={fadeIn()}>show all the juices</motion.button>
+        <motion.p variants={fadeIn()}>
+          Your healthy <span> life </span> <br /> starts here with us!
         </motion.p>
       </div>
     </motion.div>

@@ -3,3 +3,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply h-screen font-serif text-gray-900 bg-gray-100;
+  }
+}
+
+@layer components {
+  /* header */
+  .header {
+    @apply h-[10vh] flex items-center px-10 py-4 md:px-20 text-lg justify-between;
+  }
+  .header-logo {
+    @apply font-black md:text-2xl;
+  }
+  .header-account {
+    @apply hidden font-medium md:block;
+  }
+  .header-user {
+    @apply block md:hidden;
+  }
+  .header > ul {
+    @apply justify-center flex-1 hidden space-x-5 md:flex;
+  }
+
+  main {
+    @apply relative h-[90vh];
+  }
+
+  /* text container */
+
+  .textContainer {
+    @apply flex flex-col h-full px-2 py-28 md:px-52;
+  }
+  .textContainer-top {
+    @apply flex items-center justify-between text-lg md:text-2xl;
+  }
+  .textContainer-middle {
+    @apply grid flex-1 place-items-center;
+  }
+  .textContainer-middle > span {
+    @apply text-5xl font-black tracking-wider md:text-9xl;
+  }
+  .textContainer-bottom {
+    @apply flex items-center justify-between;
+  }
+  .textContainer-bottom > button {
+    @apply p-2 text-base tracking-wide text-white lowercase bg-gray-900 rounded-lg md:px-6 md:py-3 md:text-lg;
+  }
+  .textContainer-bottom > p {
+    @apply text-sm font-semibold md:text-2xl;
+  }
+  .textContainer-bottom > p > span {
+    @apply text-green-600;
+  }
+
+  /* bottle it like barcelona :: */
+  .bottleWrapper {
+    @apply absolute top-0 left-0 grid w-full text-center place-items-center;
+  }
+  .bottle {
+    @apply h-[400px] w-[250px] md:h-[550px] md:w-[500px] object-contain;
+  }
+
+  /* leaf & co. */
+  .leafWrapper-1 {
+    @apply absolute top-52 left-[30%];
+  }
+  .leafWrapper-2 {
+    @apply absolute top-1/2 right-72;
+  }
+  .leafWrapper-3 {
+    @apply absolute top-10 right-[40%];
+  }
+  .leafWrapper-4 {
+    @apply absolute top-[36%] right-1/3;
+  }
+  .leafWrapper-5 {
+    @apply absolute top-[75%] left-1/4;
+  }
+  .leaf {
+    @apply object-contain w-20 h-28;
+  }
+}

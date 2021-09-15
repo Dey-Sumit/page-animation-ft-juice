@@ -3,24 +3,19 @@ import { fadeIn } from "variants";
 
 const Header = () => {
   return (
-    <motion.div
-      variants={fadeIn("down")}
-      initial="initial"
-      animate="animate"
-      className="h-[10vh] flex items-center px-10 py-4 md:px-20 text-lg justify-between"
-    >
-      <span className="font-black md:text-2xl">CLEAN JUICE</span>
-      <div className="justify-center flex-1 hidden space-x-5 md:flex ">
-        <span>SHOP</span>
-        <span>STORY</span>
-        <span>MENU</span>
-        <span>CONTACT</span>
-        <span>ALL JUICES</span>
-      </div>
+    <motion.nav variants={fadeIn("down")} initial="initial" animate="animate" className="header">
+      <span className="header-logo">CLEAN JUICE</span>
+      <ul>
+        <li>SHOP</li>
+        <li>STORY</li>
+        <li>MENU</li>
+        <li>CONTACT</li>
+        <li>ALL JUICES</li>
+      </ul>
 
-      <span className="hidden font-medium md:block">My Account</span>
-      <span className="block md:hidden">🤕</span>
-    </motion.div>
+      <span className="header-account">My Account</span>
+      <span className="header-user">🤕</span>
+    </motion.nav>
   );
 };
 
